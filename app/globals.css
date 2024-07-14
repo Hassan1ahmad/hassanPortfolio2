@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+body {
+  background: url(/assets/bg\ patterns.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+:root {
+  --swiper-navigation-size: 27px !important;
+}
