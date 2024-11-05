@@ -1,5 +1,6 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
     return (
@@ -18,7 +19,42 @@ const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
     )
 }
 
-function Experience() {
+ function Experience() {
+
+  async function fetchPosts() {
+    const response = await fetch('http://localhost/wordpress/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query AllPosts {
+            posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
+              edges {
+                node {
+                  title
+                  excerpt
+                  slug
+                  date
+                  content
+                }
+              }
+            }
+          }
+        `,
+      }),
+    });
+  
+    const json = await response.json();
+  
+    console.log(json.data.posts.edges[0].node);
+  }
+  useEffect(() => {
+    fetchPosts()
+  }, []);
+
+
     return (
         <div className='p-5 flex max-md:flex-col relative '>
        {/* left side */}
