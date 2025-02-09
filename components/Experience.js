@@ -21,38 +21,8 @@ const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
 
  function Experience() {
 
-  async function fetchPosts() {
-    const response = await fetch('http://localhost/wordpress/graphql', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query: `
-          query AllPosts {
-            posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
-              edges {
-                node {
-                  title
-                  excerpt
-                  slug
-                  date
-                  content
-                }
-              }
-            }
-          }
-        `,
-      }),
-    });
-  
-    const json = await response.json();
-  
-    console.log(json.data.posts.edges[0].node);
-  }
-  useEffect(() => {
-    fetchPosts()
-  }, []);
+ 
+ 
 
 
     return (
@@ -74,8 +44,8 @@ const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
         </div>
         <div>
           <p className="w-[263px] text-neutral-950 text-2xl font-normal font-['Inter'] leading-[33.60px]">
-            Working on Freelance plateforms.
-          </p>
+          Worked on various platforms.
+                    </p>
           <div className=" ml-[130px] py-4 max-md:block hidden">
           <Image
             src="/assets/arrow right.svg"
@@ -88,8 +58,8 @@ const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
       </div>
       {/* right side */}
       <div className='gap-5 flex  flex-col ml-10 max-lg:ml-20 max-md:ml-0  mt-20 max-md:mt-5'>
-        <ExperienceCard index={1} expName={'WebDeveloper on '} expDetail={'React JS, Next JS Developer'} place={'Fiverr'} date={'Nov 23 - Present'}/>
-        <ExperienceCard index={2} expName={'WebDeveloper on '} expDetail={'MERN stack Develoer'} place={'Upwork'} date={'Nov 23 - Present'}/>
+        <ExperienceCard index={1} expName={'Full Stack Developer | '} expDetail={'React JS, Firebase Developer'} place={'TechUp.ai'} date={'August 2024 - Present'}/>
+        <ExperienceCard index={2} expName={'WebDeveloper | '} expDetail={'MERN stack, Next JS Develoer'} place={'Fiverr, Upwork'} date={'May 2023 - July 2024'}/>
       </div>  
 
         <div className="w-[345px] max-md:hidden h-[0px] left-[500px] max-lg:left-[361px] top-[399px] absolute origin-top-left -rotate-90 border-2 border-black"></div>
