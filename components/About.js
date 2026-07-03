@@ -72,15 +72,14 @@ function About() {
               <span className="relative z-10"> Build</span>
               <span className="absolute left-0 top-1/2 transform -translate-y-1/2 h-1/2 w-full bg-pink-200 z-0"></span>
             </span>{" "}
-            High-Quality, <br />
-            Responsive Web Applications.
+            Production-Ready <br />
+            Web Applications.
           </p>
         </div>
         {/* right side */}
         <div className="flex flex-col mr-10">
           <div className="w-[500px] max-md:w-[90vw] max-md:text-[5vw] max-lg:text-[3vw] max-lg:w-[90vw] max-md:mt-3 max-md:leading-tight text-neutral-950 text-2xl font-normal font-['Inter'] leading-[33.60px]">
-            Passionate MERN Stack, Next JS developer Skilled for building
-            user-friendly interfaces.
+            JavaScript developer — APIs, databases, deployment, and live production support.
           </div>
         <div>
           <button onClick={() => setShowModal(true)} className="text-white text-2xl font-semibold font-['Inter'] leading-[33.60px] bg-neutral-950 px-[25px] mt-5 py-[9px] max-md:px-3 max-md:py-1.5">
@@ -116,7 +115,7 @@ function About() {
               </div>
               <div className='flex my-5 justify-between '>
               <div className=" h-9 px-[21px] py-1.5  bg-indigo-300 opacity rounded-[44px] justify-center items-center gap-2.5 inline-flex">
-                <div className="text-indigo-700 text-[13px] font-normal ">Web Developer</div>
+                <div className="text-indigo-700 text-[13px] font-normal ">JavaScript Developer</div>
                 </div>
               <div className="flex items-center mb-1">
                 {[...Array(Math.floor(platforms[activeTab].rating))].map((_, i) => (

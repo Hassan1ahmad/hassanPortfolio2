@@ -2,16 +2,27 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 
-const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
+const ExperienceCard = ({ date, expDetail, expName, place, placeFull, projectLink, index }) => {
     return (
         <div className="self-stretch justify-start items-center gap-[37px] max-sm:gap-[20px] inline-flex">
             <div className={` w-[95px] max-md:h-[75px] max-md:w-[75px] max-md:px-[24.83px] max-md:py-[5.09px] px-[39px] py-2 ${index === 2 ? 'bg-cyan-200 border-blue-400 ' : index === 3 ? 'bg-pink-200 border-pink-400' : 'bg-amber-200 border-amber-300 '} rounded-md border-2 flex-col justify-center items-center gap-2.5 inline-flex`}>
                 <div className="text-center text-black text-5xl max-md:text-3xl font-normal font-['Handlee'] leading-[72px]">{index}</div>
             </div>
             <div className="flex-col justify-start items-start gap-1.5 max-md:gap-0.5 inline-flex">
-                <div className=""><span className="text-neutral-950 text-2xl max-md:text-base font-normal font-['Inter'] leading-[33.60px]">{expName} </span><span className="text-neutral-950 text-2xl max-md:text-base  font-bold font-['Inter'] leading-[33.60px]">{place}</span></div>
-                <div className="h-[50px] flex-col justify-start items-start gap-[3px] flex">
+                <div className="">
+                  <span className="text-neutral-950 text-2xl max-md:text-base font-normal font-['Inter'] leading-[33.60px]">{expName} </span>
+                  <span className="text-neutral-950 text-2xl max-md:text-base font-bold font-['Inter'] leading-[33.60px]">{place}</span>
+                  {placeFull && (
+                    <span className="block text-neutral-500 text-sm max-md:text-xs font-normal font-['Inter'] leading-snug">{placeFull}</span>
+                  )}
+                </div>
+                <div className="min-h-[50px] flex-col justify-start items-start gap-[3px] flex">
                     <div className=" text-neutral-950 text-lg max-md:text-[13.50px] font-normal font-['Inter'] leading-[25.20px]">{expDetail}</div>
+                    {projectLink && (
+                      <a href={projectLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm max-md:text-xs font-medium font-['Inter'] hover:underline">
+                        View project →
+                      </a>
+                    )}
                     <div className=" text-neutral-500 text-base max-md:text-[10.50px] font-medium font-['Inter'] leading-snug">{date}</div>
                 </div>
             </div>
@@ -58,8 +69,8 @@ const ExperienceCard = ({ date, expDetail, expName, place, index }) => {
       </div>
       {/* right side */}
       <div className='gap-5 flex  flex-col ml-10 max-lg:ml-20 max-md:ml-0  mt-20 max-md:mt-5'>
-        <ExperienceCard index={1} expName={'Full Stack Developer | '} expDetail={'React JS, Firebase Developer'} place={'TechUp.ai'} date={'August 2024 - Present'}/>
-        <ExperienceCard index={2} expName={'WebDeveloper | '} expDetail={'MERN stack, Next JS Develoer'} place={'Fiverr, Upwork'} date={'May 2023 - July 2024'}/>
+        <ExperienceCard index={1} expName={'Software Developer | '} place={'ICBS'} placeFull={'Imperial College of Business Studies'} expDetail={'Lead dev — Campus Management System'} projectLink={'https://cms.imperial.edu.pk/'} date={'April 2025 - July 2026'}/>
+        <ExperienceCard index={2} expName={'Full Stack Developer | '} expDetail={'Pink Elephants — AI goal-tracking app'} projectLink={'https://pinkelephants.ai/'} place={'TechUp.ai'} date={'August 2024 - May 2025'}/>
       </div>  
 
         <div className="w-[345px] max-md:hidden h-[0px] left-[500px] max-lg:left-[361px] top-[399px] absolute origin-top-left -rotate-90 border-2 border-black"></div>

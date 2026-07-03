@@ -39,12 +39,12 @@ function WhatIDo() {
             <div className="px-5 pt-36 ">
               <Image src="/assets/landing-page-icons.png" alt="figma icon" width={79} height={84} />
               <p className="text-black text-2xl max-md:text-[18px] max-md:leading-7 font-medium font-['Inter'] mt-5">
-                Provide services to develop fully functional landing pages. Fast, reliable, and optimized.
+                Reliable database schema design for your product.
               </p>
             </div>
             <div className="bg-pink-200 shadow absolute left-[127px] max-md:left-[100px] top-[-16.44px]">
               <p className="text-center text-neutral-950 text-[32px] max-md:text-[25px] font-normal font-['Handlee']">
-                Landing pages
+                Databases
               </p>
             </div>
           </div>
@@ -53,12 +53,12 @@ function WhatIDo() {
             <div className="px-5 pt-36">
               <Image src="/assets/website-icons.png" alt="figma icon" width={79} height={84} />
               <p className="text-black text-2xl max-md:text-[18px] max-md:leading-7 text-pretty font-medium font-['Inter'] mt-5">
-                Create responsive, high-performance sites that showcase your brand and business.
+                Production deployment and live server maintenance.
               </p>
             </div>
             <div className="bg-amber-200 shadow absolute left-[258px] max-md:left-[55vw] top-[65px]">
               <p className="text-center text-neutral-950 text-[32px] max-md:text-[25px] font-normal font-['Handlee']">
-                Websites
+                Deployment
               </p>
             </div>
           </div>
