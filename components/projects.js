@@ -65,7 +65,7 @@ function projects() {
         <ProjectCard imageSrc={'/assets/job-pilot.svg'} projectName={'Job Pilot'} projectdetails={'Nextjs using Public API'} projectLink={'https://pilot-job.netlify.app/'} />
         <ProjectCard imageSrc={'/assets/skyline.svg'} projectName={'SkyLine Realestate'} projectdetails={"MERN Stack based"} projectLink={"https://skylinerealestate.netlify.app/"}  />
         <ProjectCard imageSrc={'/assets/Nobel-prize.svg'} projectName={'Noble Prizes Hub'} projectdetails={'Reactjs using public API'}  />
-        <ProjectCard imageSrc={'/assets/note.svg'} projectName={'Note Nest'} projectdetails={"MERN stack based"} projectLink={"https://hassan1ahmad.github.io/NoteNest/"}  />
+        <ProjectCard imageSrc={'/assets/note.svg'} projectName={'Note Nest'} projectdetails={"MERN stack based"} projectLink={"https://note2nest.netlify.app/"}  />
       </div>
     </div>
   );
